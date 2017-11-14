@@ -62,10 +62,14 @@ class Uber extends React.Component{
         // Sort by price
         etacost.sort(function(a, b){ return a.cost - b.cost})
 
+        // Format Data for bar chart
+        var barData = [];
+        etacost.forEach(function(ride){
+            barData.push([ride.display_name, ride.cost])
+        })
         return (
             <div>
                 <h1>Uber</h1>
-                
                 <DisplayTable rideInfo={etacost}/>
             </div>
         )

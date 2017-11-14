@@ -33,7 +33,6 @@ class App extends Component {
                    hasAddress:true});
   }
   handleNewUberData(cost){
-    console.log('newUber');
     var time = new Date();
     var timeString = time.getHours() + ":" + time.getMinutes() + ':' + time.getSeconds();
     var data = this.state.timeSeriesData.slice();
@@ -49,7 +48,6 @@ class App extends Component {
     }
   }
   handleNewLyftData(cost){
-    console.log('newLyft')
     var time = new Date();
     var timeString = time.getHours() + ":" + time.getMinutes() + ':' + time.getSeconds();
     var data = this.state.timeSeriesData.slice();
